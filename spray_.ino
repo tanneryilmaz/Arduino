@@ -1,4 +1,4 @@
-//newLight variable is the most recent reading from the photoelectric diode
+//newLight is the most recent reading from the photoelectric diode
 //oldLight is the previous reading from the photoelectric diode
 //diff is the absolute value of the difference between oldLight and newLight
 //isSignificant is a boolean variable. It is set to true when diff variable's value is greater than 50
@@ -41,7 +41,8 @@ bool compare() {
   return spray;
 }
 
-void turnServo(){ //this function turns the servo 
+void turnServo(){ 
+  //this function turns the servo 
   servo1.write(50);
   delay(1000);
   servo1.write(0);
