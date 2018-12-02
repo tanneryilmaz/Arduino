@@ -27,18 +27,12 @@ void loop() {
   }
   oldLight = newLight; 
   showData(); //prints data to serial monitor
-  delay(5000); 
+  delay(2500); 
 }
 bool compare() { 
-  //this function compares determines if there has been a significant change in the lightLevel 
+  //this function determines if there has been a significant change in the lightLevel 
   diff = abs(oldLight - newLight);
-  if(diff > 50){
-    spray = true;
-  }
-  else{
-    spray = false;
-  }
-  return spray;
+  return (diff > 50);
 }
 
 void turnServo(){ 
